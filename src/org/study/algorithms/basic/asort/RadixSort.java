@@ -3,6 +3,7 @@ package org.study.algorithms.basic.asort;
 import java.util.Arrays;
 
 public class RadixSort extends BaseSort{
+    @Override
     public int[] sort(int[] sourceArray){
         // 对 arr 进行拷贝，不改变参数内容
         int[] arr = Arrays.copyOf(sourceArray, sourceArray.length);
@@ -15,8 +16,8 @@ public class RadixSort extends BaseSort{
      * 获取最高位数
      */
     private int getMaxDigit(int[] arr) {
-        int maxValue = getMaxValue(arr);
-        return getNumLenght(maxValue);
+        int maxValue = getMaxValue(arr);  // 获取最大值
+        return getNumLength(maxValue);  // 位数
     }
 
     private int getMaxValue(int[] arr) {
@@ -29,15 +30,15 @@ public class RadixSort extends BaseSort{
         return maxValue;
     }
 
-    protected int getNumLenght(long num) {
+    protected int getNumLength(long num) {
         if (num == 0) {
             return 1;
         }
-        int lenght = 0;
+        int length = 0;
         for (long temp = num; temp != 0; temp /= 10) {
-            lenght++;
+            length++;
         }
-        return lenght;
+        return length;
     }
 
     private int[] radixSort(int[] arr, int maxDigit) {

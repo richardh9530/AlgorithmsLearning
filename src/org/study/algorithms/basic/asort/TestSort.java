@@ -4,7 +4,7 @@ import org.study.references.basic.algs4.Heap;
 
 abstract class BaseSort {
     // int[] toBeSortedArray = {1,3,5,7,4,2,28,37,6,0};
-    int[] toBeSortedArray = {1,5,3,7,4,8};
+    int[] toBeSortedArray = {5,1,3,7,4,8};
 
     public abstract int[] sort(int[] sourceArray);
 
@@ -18,7 +18,7 @@ abstract class BaseSort {
 
 public class TestSort {
     public static void main(String[] args){
-         new HeapSort().testSort();
+         new RadixSort().testSort();
     }
 }
 

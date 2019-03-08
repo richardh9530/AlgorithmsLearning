@@ -23,7 +23,7 @@ public class HeapSort extends BaseSort{
     }
 
     private void buildMaxHeap(int[] arr, int len) {
-        for (int i = len / 2; i >= 0; i--) {
+        for (int i = len / 2; i >= 0; i--) {  // 对每一个非叶子结点，调整堆
             heapify(arr, i, len);
         }
     }
@@ -51,7 +51,7 @@ public class HeapSort extends BaseSort{
             largest = right;
         }
 
-        if (largest != i) {  // 这个时候根节点大于左右儿子，largest 可能左，也可能右
+        if (largest != i) {  // 这个时候根节点小于于左右儿子，largest 可能左，也可能右
             swap(arr, i, largest);
             System.out.println("adjust heap: "+ arr[i] + " --> "+ arr[largest]);
             heapify(arr, largest, len);  // 调整与原来根节点对换位置的那个儿子及其子孙

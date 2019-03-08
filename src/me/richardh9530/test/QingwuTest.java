@@ -15,7 +15,7 @@ class Test{
 }
 public class QingwuTest extends Test implements inter{
     static List<String> list;
-    public static void main(String[] args){
+    public static void testParameterizedType(String[] args){
         int i = 0;
         i = i++;
         System.out.println(i++);
@@ -34,6 +34,12 @@ public class QingwuTest extends Test implements inter{
             System.out.println(clazz);
         }
 
+    }
+
+    public static void main(String[] args){
+        byte a=0,b = 0;
+        byte c = (byte)(a+b);
+        System.out.println(c);
     }
 }
 

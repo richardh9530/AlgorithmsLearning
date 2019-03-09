@@ -36,10 +36,20 @@ public class QingwuTest extends Test implements inter{
 
     }
 
-    public static void main(String[] args){
-        byte a=0,b = 0;
-        byte c = (byte)(a+b);
-        System.out.println(c);
+//    public static void main(String[] args){
+//        byte a=0,b = 0;
+//        byte c = (byte)(a+b);
+//        System.out.println(c);
+//    }
+    public static synchronized void main(String[] a){
+        Thread t=new Thread(){
+            public void run(){Sogou();}
+        };
+        t.start();
+        System.out.print("Hello");
+    }
+    static synchronized void Sogou(){
+        System.out.print("Sogou");
     }
 }
 

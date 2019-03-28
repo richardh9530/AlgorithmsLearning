@@ -42,11 +42,14 @@ public class QingwuTest extends Test implements inter{
 //        System.out.println(c);
 //    }
     public static synchronized void main(String[] a){
-        Thread t=new Thread(){
-            public void run(){Sogou();}
-        };
-        t.start();
-        System.out.print("Hello");
+//        Thread t=new Thread(){
+//            public void run(){Sogou();}
+//        };
+//        t.start();
+//        System.out.print("Hello");
+        while(true){
+            System.out.println("Hello");
+        }
     }
     static synchronized void Sogou(){
         System.out.print("Sogou");
